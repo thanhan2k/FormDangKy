@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-SignIn</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./JS/index.js"></script>
+</head>
+<body>
+    <form action="xulydangky.php" method="post" name="formSignIn" id="formSignIn" onsubmit="return ValidForm();">
+        <h1>Phiếu Đăng Kí</h1>
+        <table cellpadding="5" cellpadding="5">
+            <tr>
+                <td align="right">Họ tên</td>
+                <td>
+                    <input type="text" name="txtHoTen" id="txtHoTen" autofocus class="txt" size="30" maxlength="25">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Địa chỉ</td>
+                <td>
+                    <textarea name="txtDiaChi" id="txtDiaChi" cols="30" rows="5" maxlength="50" required class="txt"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Email</td>
+                <td>
+                    <input type="email" name="txtEmail" id="txtEmail" required class="txt">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Điện thoại</td>
+                <td>
+                    <input type="tel" name="txtDt" id="txtDt" required class="txt">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Giới tính</td>
+                <td>
+                    <input type="radio" name="checkSex" id="male" value="1" checked>
+                    <label for="male">Nam</label>
+                    <input type="radio" name="checkSex" id="female" value="0">
+                    <label for="female">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Nghề nghiệp</td>
+                <td>
+                    <select name="cboNgheNghiep" id="cboNgheNghiep" class="txt">
+                        <option value="1" selected>Giáo viên</option>
+                        <option value="2">Sinh viên</option>
+                        <option value="3">Bác sĩ</option>
+                        <option value="4">Khác</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Chọn sản phẩm </td>
+                <td>
+                    <select name="lstSanPham" id="lstSanPham" class="txt" multiple size="4">
+                        <option value="1" selected>Kem đánh răng</option>
+                        <option value="2">Dầu gội</option>
+                        <option value="3">Sữa tắm</option>
+                        <option value="4">Bột giặt</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Dự đoán số người tham gia</td>
+                <td>
+                    <input type="number" name="numPar" id="numPar" class="txt" min="1" step="1" value="1">
+                </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" name="btnSubmit" id="btnSubmit" class="btn" value="Đăng kí">
+                    <input type="reset" name="btnReset" id="btnReset" class="btn" value="Làm lại" onclick="LamLai();">
+                </td>
+            </tr>
+            <tr>
+                <td height="50" colspan="2">
+                    <label id="thongbao"></label>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
